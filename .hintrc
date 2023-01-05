@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "highest-available-document-mode": "off",
+    "button-type": "off",
+    "compat-api/css": [
+      "default"
+      
+    ]
+  }
+}

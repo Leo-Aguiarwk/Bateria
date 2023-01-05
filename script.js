@@ -1,3 +1,6 @@
+
+//Events///
+//pegando composicao e transformando em array para tocar 
 document.querySelector('.btn-play').addEventListener('click', ()=>{
     let composition = document.querySelector('.composition').value;
     if(composition != '') {
@@ -5,15 +8,13 @@ document.querySelector('.btn-play').addEventListener('click', ()=>{
         playComposition(compositionArray);
     } 
 });
-
+//pegando tecla digitada e mandando para fucao que vai tocar
 document.body.addEventListener('keyup', (e)=>{
     playSound(e.code.toLocaleLowerCase());
 });
 
-
-
-
-// Functions 
+// Functions ///
+// Funcao para tocar 
 function playSound(sound) {
     let audio = document.querySelector(`#s_${sound}`);
     let key = document.querySelector(` div [data-key="${sound}"]`);
@@ -31,6 +32,7 @@ function playSound(sound) {
     }
 }
 
+// Funcao para tocar composicao 
 function playComposition(compositionArray) {
     wait = 0;
     for(let songItem of compositionArray){
